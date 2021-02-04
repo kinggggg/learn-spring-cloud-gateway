@@ -1,0 +1,35 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - predicates:
+#            - path=/gateway/**
+#          filters:
+#            - StripPrefix=1
+#          uri: http://localhost:9090/hello
+
+
+## 按照请求方法路由: 当在浏览器中访问http://localhost:8088时,请求将会被重定向到www.baidu.com
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: method_route
+#          uri: http://www.baidu.com
+#          predicates:
+#            - Method=GET,POST
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: method_route
+          uri: http://www.lwbserver.com:9090/ # GW默认情况下只能跳转到根路径
+          predicates:
+            - Method=GET,POST
+          filters:
+            - PrefixPath=/hello
+
+
+server:
+  port: 8088
