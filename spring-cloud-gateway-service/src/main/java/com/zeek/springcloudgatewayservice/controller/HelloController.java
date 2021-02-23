@@ -1,5 +1,7 @@
 package com.zeek.springcloudgatewayservice.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +18,7 @@ public class HelloController {
     }
 
     @GetMapping(value = "/hello")
-    public String hello() {
+    public String hello(HttpServletRequest request) {
         return "world";
     }
 }
