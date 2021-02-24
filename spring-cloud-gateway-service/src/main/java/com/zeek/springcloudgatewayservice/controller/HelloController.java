@@ -19,6 +19,7 @@ public class HelloController {
 
     @GetMapping(value = "/hello")
     public String hello(HttpServletRequest request) {
+        System.out.println("/hello");
         return "world";
     }
 }

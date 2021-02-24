@@ -28,7 +28,7 @@ spring:
           predicates:
             - Method=GET,POST
           filters:
-            - PrefixPath=/hello
+            - AddRequestHeader=X-Request-red, blue
 
 
 server:
