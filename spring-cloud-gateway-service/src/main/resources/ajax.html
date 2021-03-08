@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS</title>
+</head>
+<body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script type="application/javascript">
+        <!-- 跨域测试 -->
+        $.ajax({
+            url: 'http://localhost:9090/hello/test1',
+            type: "GET"
+            // xhrFields: {
+            //     withCredentials: true    //允许发送Cookie信息
+            // },
+            // success: function (data) {
+            //     alert("跨域请求配置成功")
+            // },
+            // error: function (data) {
+            //     alert("跨域请求配置失败")
+            // }
+        })
+    </script>
+</body>
+</html>
