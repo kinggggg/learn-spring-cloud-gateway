@@ -29,6 +29,7 @@ spring:
             - Method=GET,POST
           filters:
             - AddRequestHeader=X-Request-red, blue
+#            - PreserveHostHeader
 
 
 server:
