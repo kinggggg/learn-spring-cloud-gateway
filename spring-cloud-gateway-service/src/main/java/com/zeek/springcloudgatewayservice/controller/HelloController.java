@@ -20,6 +20,18 @@ public class HelloController {
     @GetMapping(value = "/hello")
     public String hello(HttpServletRequest request) {
         System.out.println("/hello");
-        return "world";
+        return "/hello";
+    }
+
+    @GetMapping(value = "/hello/test1")
+    public String helloTest1(HttpServletRequest request) {
+        System.out.println("/hello/test1");
+        return "/hello/test1";
+    }
+
+    @GetMapping(value = "/hello/test2")
+    public String helloTest2(HttpServletRequest request) {
+        System.out.println("/hello/test2");
+        return "/hello/test2";
     }
 }
